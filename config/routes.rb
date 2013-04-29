@@ -7,5 +7,5 @@ Shouter::Application.routes.draw do
   root to: "homes#show" 
 
   resource :dashboard, only: [:show]
-  resources :shouts, only: [:create]
+  resources :text_shouts, only: [:create]
 end

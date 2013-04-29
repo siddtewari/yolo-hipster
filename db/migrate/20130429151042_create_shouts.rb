@@ -1,5 +1,5 @@
 class CreateShouts < ActiveRecord::Migration
-  def change
+  def up
     create_table :shouts do |t|
       t.string :body, null: false
       t.belongs_to :user
