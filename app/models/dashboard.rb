@@ -18,7 +18,7 @@ class Dashboard
 	private
 
 	attr_reader :user
-
+	
 	def timeline_user_ids
 		user.self_and_followed_user_ids
 	end

@@ -7,10 +7,6 @@ describe User do
 	end	
 
 	it "#can_follow? unless already following" do
-		# user 
-		# another user
-		# make sure follow another user 
-		# make sure user can not follow another user
 		follower = create(:user)
 		followed_user = create(:user)
 		follower.follow followed_user

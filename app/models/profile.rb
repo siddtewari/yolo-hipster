@@ -1,6 +1,6 @@
 class Profile
 
-	def intialize user_id
+	def initialize user_id
 		@user_id = user_id
 	end
 
