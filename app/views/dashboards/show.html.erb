@@ -1,21 +1,15 @@
-<h1>Dashboard</h1>
+<div class="sidebar">
+  <%= form_for @text_shout do |form| %>
+    <%= form.text_field :body, placeholder: "Shout here" %>
+    <%= form.submit "Shout!" %>
+  <% end %>
+  <%= form_for @photo_shout do |form| %>
+    <%= form.file_field :image %>
+    <%= form.submit "Shout!" %>
+  <% end %>
+</div>
 
-<%= form_for @text_shout do |form| %>
-	<%= form.text_field :body, placeholder: "Shout here" %>
-	<%= form.submit "Shout!" %>
-<% end %>
-
-<%= form_for @photo_shout do |form| %>
-	<%= form.file_field :image %>
-	<%= form.submit "Shout!" %>
-<% end %>
-
-<% @shouts.each do |shout| %>
-	<div>
-		<br />
-		<%= shout.user.email %> shouted
-		<%= render shout.content %>
-		<%= time_ago_in_words(shout.created_at) %> 
-		<hr />
-	</div>
-<% end %>
+<div class="timeline">
+	<h2>Shouts</h2>
+	<%= render @shouts %>
+</div>
