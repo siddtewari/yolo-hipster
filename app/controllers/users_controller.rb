@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @profile = Profile.new(params[:id])
-    # @shouts = @user.shouts.current
+    @profile = Profile.new(params[:id], current_user: current_user)
   end
 end
