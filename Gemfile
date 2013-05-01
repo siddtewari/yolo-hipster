@@ -4,9 +4,11 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'clearance', '1.0.0.rc7'
 gem 'paperclip'
+gem 'heroku'
 
-group :production do
+group :production, :staging do
 	gem 'pg'
+	gem 'thin'
 end
 
 group :development, :test do
